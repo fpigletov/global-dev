@@ -1,0 +1,221 @@
+.home
+    background-color: $bg-color
+
+    &__container
+        height: 100%
+
+    &__body
+        display: flex
+        height: 100%
+        @media (max-width: $md3)
+            display: block
+
+    &__info
+        padding-top: 40px
+        margin-right: 75px
+        @media (max-width: $md3)
+            margin-right: 0
+            padding-top: 0
+
+    &__title
+        font-weight: 700
+        font-size: 48px
+        line-height: 63px
+        color: $black-color
+        margin-bottom: 22px
+        span
+            color: $orange-color
+        @media (max-width: $md2)
+            font-size: 36px
+            line-height: 42px
+            margin-bottom: 15px
+        @media (max-width: $md4)
+
+    &__descr
+        font-size: 15px
+        line-height: 26px
+        color: #7C7C7C
+        margin-bottom: 30px
+        @media (max-width: $md2)
+            margin-bottom: 20px
+        @media (max-width: $md3)
+            max-width: 500px
+        @media (max-width: $md4)
+            line-height: 23px
+
+    &__btn
+        height: 46px
+        padding: 10px 30px
+        margin-bottom: 50px
+        @media (max-width: $md2)
+            margin-bottom: 35px
+        @media (max-width: $md4)
+            margin-bottom: 20px
+
+    &__search
+        width: 597px
+        height: 62px
+        display: flex
+        align-items: center
+        background-color: $white-color
+        box-shadow: 0px 20px 30px rgba(222, 222, 222, 0.25)
+        border-radius: 30px
+        padding: 4px 6px 4px 20px
+        margin-bottom: 40px
+        @media (max-width: $md2)
+            width: 400px
+            margin-bottom: 30px
+        @media (max-width: $md4)
+            width: 100%
+            height: 50px
+            margin-bottom: 30px
+
+    &__users
+        display: flex
+        align-items: center
+
+    &__animation
+        position: relative
+        @media (max-width: $md3)
+            display: none
+
+.home-search
+
+    &__label
+        display: block
+        width: 100%
+        height: 100%
+
+    &__input
+        width: 100%
+        height: 100%
+        padding: 10px
+        outline: none
+        font-family: 'Roboto'
+        font-style: normal
+        font-weight: 400
+        color: #A2A2A2
+        &::placeholder
+            font-family: 'Roboto'
+            font-style: normal
+            font-weight: 400
+            letter-spacing: 0.01em
+            color: #A2A2A2
+
+    &__btn
+        flex: 0 0 42px
+        height: 42px
+        border-radius: 100%
+
+.home-users
+
+    &__icons
+        position: relative
+        margin-right: 12px
+        flex: 0 0 101px
+        height: 38px
+
+    &__icon
+        position: absolute
+        top: 0
+        left: 0
+        width: 38px
+        height: 100%
+        z-index: 4
+        img
+            width: 100%
+            height: 100%
+        &:nth-child(2)
+            left: 21px
+            z-index: 3
+        &:nth-child(3)
+            left: 42px
+            z-index: 2
+        &:nth-child(4)
+            left: 63px
+            z-index: 1
+
+    &__descr
+        font-family: 'Roboto'
+        font-weight: 400
+        line-height: 19px
+        color: #707070
+
+    &__link
+        color: #FD905A
+        transition: color 0.3s ease 0s
+        @media (any-hover: hover)
+            &:hover
+                color: #d66e3a
+
+.home-animation
+
+    &__ring
+        position: relative
+        width: 450px
+        height: 450px
+        border: 2px solid #E8E8E8
+        border-radius: 100%
+
+    &__flags
+
+    &__flag
+        position: absolute
+        z-index: 1
+        border-radius: 100%
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            border-radius: 100%
+        &:nth-child(1)
+            width: 50px
+            height: 50px
+            top: 247px
+            left: -20px
+
+        &:nth-child(2)
+            width: 80px
+            height: 80px
+            top: 77px
+            left: -10px
+
+        &:nth-child(3)
+            width: 60px
+            height: 60px
+            top: -30px
+            left: 225px
+
+        &:nth-child(4)
+            width: 70px
+            height: 70px
+            top: 87px
+            left: 390px
+
+        &:nth-child(5)
+            width: 50px
+            height: 50px
+            top: 247px
+            left: 417px
+
+    &__circle
+        position: absolute
+        top: 117px
+        left: 90px
+        z-index: 2
+        width: 280px
+        height: 280px
+        border-radius: 100%
+        background-color: $green-color
+
+    &__image
+        position: absolute
+        bottom: 0
+        right: 72px
+        width: 298px
+        height: 557px
+        z-index: 3
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover

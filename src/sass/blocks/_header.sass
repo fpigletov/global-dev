@@ -1,0 +1,135 @@
+.header
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    z-index: 100
+
+    &__body
+        position: relative
+        z-index: 100
+        min-height: 102px
+        display: flex
+        align-items: center
+        padding-right: 28px
+        @media (max-width: $md1)
+            padding-right: 0
+        @media (max-width: $md4)
+            min-height: 70px
+
+    &__logo
+        display: flex
+        align-items: center
+        font-size: 25px
+        line-height: 38px
+        color: $black-color
+        margin-right: 23.4%
+        svg
+            margin-right: 8px
+        @media (max-width: $md4)
+            margin-right: 10px
+
+    &__menu
+        @media (min-width: $md2)
+            flex: 0 0 400px
+            padding-right: 20px
+        @media (max-width: $md2)
+            display: none
+            position: absolute
+            top: 80px
+            right: 0
+            z-index: 50
+            background-color: $white-color
+            padding: 15px
+            border-radius: 5px
+            background-color: $green-color
+            // &.active
+            //     display: block
+        @media (max-width: $md4)
+            top: 60px
+
+    &__list
+        display: flex
+        align-items: center
+        flex-wrap: wrap
+        @media (max-width: $md2)
+            flex-direction: column
+
+    &__item
+        &:not(:last-child)
+            margin-right: 44px
+        @media (max-width: $md2)
+            &:not(:last-child)
+                margin: 0 0 10px 0
+
+    &__link
+        position: relative
+        font-weight: 400
+        line-height: 24px
+        color: #4A4A4A
+        &::before
+            content: ''
+            position: absolute
+            bottom: -6px
+            left: 50%
+            transform: translateX(-50%)
+            width: 21px
+            height: 1.5px
+            background-color: #FB9B69
+            opacity: 0
+            visibility: hidden
+            transition: opacity 0.3s ease, visibility 0.3s ease
+        @media (any-hover: hover)
+            &:hover
+                &::before
+                    opacity: 1
+                    visibility: visible
+        @media (max-width: $md2)
+            color: $white-color
+
+    &__btn
+        height: 42px
+        padding: 9px 30px
+        line-height: 24px
+        margin-left: auto
+        @media (max-width: $md2)
+            margin-right: 15px
+        @media (max-width: $md4)
+            height: 35px
+            padding: 5px 22px
+
+    &__burger
+        display: none
+        @media (max-width: $md2)
+            display: block
+            position: relative
+            width: 30px
+            height: 18px
+            cursor: pointer
+            span
+                transition: all 0.3s ease 0s
+                top: calc(50% - 1px)
+                left: 0
+                position: absolute
+                width: 100%
+                height: 2px
+                background-color: #4a4a4a
+                &:first-child
+                    top: 0
+                &:last-child
+                    top: auto
+                    bottom: 0
+            &.active
+                span
+                    transform: scale(0)
+                    &:first-child
+                        transform: rotate(-45deg)
+                        top: calc(50% - 1px)
+
+                    &:last-child
+                        transform: rotate(45deg)
+                        bottom: calc(50% - 1px)
+
+            @media (any-hover: hover)
+                &:hover span
+                    background-color: #d66e3a
